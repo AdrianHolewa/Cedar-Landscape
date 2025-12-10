@@ -1,97 +1,55 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset default margins and paddings */
+* {
     margin: 0;
-    background: #eef7ee;
-    color: #333;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* HEADER */
-header {
-    background: #2f6e3d;
-    padding: 20px;
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #2e7d32; /* Dark green */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #a5d6a7; /* Lighter green on hover */
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Hero section */
+.hero {
     text-align: center;
+    padding: 100px 20px;
+    background: url('garden.jpg') no-repeat center center/cover;
     color: #fff;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
-nav ul li {
-    margin: 10px 0;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* HERO SECTION */
-.hero {
-    background: url("https://via.placeholder.com/1600x500?text=Cedar+Landscape") center/cover no-repeat;
-    padding: 100px 20px;
-    text-align: center;
-    color: white;
-}
-
-/* GALLERY */
-.gallery-section {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.slider {
-    position: relative;
-    width: 90%;
-    max-width: 700px;
-    margin: auto;
-}
-
-.slides img {
-    width: 100%;
-    display: none;
-    border-radius: 10px;
-}
-
-.slides img.active {
-    display: block;
-}
-
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255,255,255,0.3);
-    border: none;
-    padding: 10px 18px;
-    font-size: 25px;
-    cursor: pointer;
-    color: #333;
-    border-radius: 5px;
-}
-
-.arrow.left {
-    left: 10px;
-}
-
-.arrow.right {
-    right: 10px;
-}
-
-/* ABOUT */
-.about-section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-/* FOOTER */
-footer {
-    background: #244c2d;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+.hero p {
+    font-size: 24px;
 }
