@@ -1,74 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cedar Landscape</title>
-    <link rel="stylesheet" href="css.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenScape Landscaping</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Info</a></li>
+            </ul>
+            <div class="logo">
+                <img src="logo.png" alt="GreenScape Logo">
+            </div>
+        </nav>
+    </header>
 
-<header>
-    <h1>Cedar Landscape</h1>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
-    </nav>
-</header>
-
-<section id="home" class="hero">
-    <h2>Professional Landscaping Services</h2>
-</section>
-
-<section id="gallery" class="gallery-section">
-    <h2>Our Work</h2>
-
-    <div class="slider">
-        <button class="arrow left">&#10094;</button>
-
-        <div class="slides">
-            <img src="images/img1.jpg" class="slide active" />
-            <img src="images/img2.jpg" class="slide" />
-            <img src="images/img3.jpg" class="slide" />
-            <img src="images/img4.jpg" class="slide" />
-        </div>
-
-        <button class="arrow right">&#10095;</button>
-    </div>
-</section>
-
-<section id="about" class="about-section">
-    <h2>About Cedar Landscape</h2>
-    <p>We create beautiful, long-lasting outdoor spaces with expert craftsmanship.</p>
-</section>
-
-<footer>
-    <p>&copy; 2025 Cedar Landscape. All rights reserved.</p>
-</footer>
-
-<script>
-    const slides = document.querySelectorAll(".slide");
-    const left = document.querySelector(".left");
-    const right = document.querySelector(".right");
-    let index = 0;
-
-    function updateSlide() {
-        slides.forEach((s, i) => s.classList.toggle("active", i === index));
-    }
-
-    left.onclick = () => {
-        index = (index - 1 + slides.length) % slides.length;
-        updateSlide();
-    };
-
-    right.onclick = () => {
-        index = (index + 1) % slides.length;
-        updateSlide();
-    };
-</script>
-
+    <main>
+        <section class="hero">
+            <h1>Welcome to GreenScape Landscaping</h1>
+            <p>Your dream garden, our expert care.</p>
+        </section>
+    </main>
 </body>
 </html>
