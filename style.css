@@ -53,3 +53,32 @@
 .hero p {
     font-size: 24px;
 }
+
+/* Home & Info sections */
+.home-section, .info-section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.home-section h2, .info-section h2 {
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+.info-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* Highlighted bordered section */
+.highlight-section {
+    border: 3px solid #a5d6a7; /* Light green border */
+    border-radius: 15px;
+    padding: 30px;
+    background-color: #f0f8f5; /* Very light green background */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-top: 30px;
+    line-height: 1.7;
+}
