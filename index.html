@@ -1,117 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cedar Landscape</title>
-    <link rel="css.css" href="css.css">
+    <link rel="stylesheet" href="css.css" />
 </head>
-
 <body>
 
-<header class="site-header">
+<header>
     <h1>Cedar Landscape</h1>
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 </header>
 
 <section id="home" class="hero">
-    <h2>Your Dream Landscape Starts Here</h2>
+    <h2>Professional Landscaping Services</h2>
 </section>
 
-<section id="services" class="services-section">
+<section id="gallery" class="gallery-section">
     <h2>Our Work</h2>
 
-    <div class="image-grid">
+    <div class="slider">
+        <button class="arrow left">&#10094;</button>
 
-        <!-- Window 1 -->
-        <div class="image-card" data-images="
-            https://source.unsplash.com/800x600/?landscape,grass,1,
-            https://source.unsplash.com/800x600/?garden,design,2,
-            https://source.unsplash.com/800x600/?lawn,green,3
-        ">
-            <button class="arrow left">&#10094;</button>
-            <img src="https://source.unsplash.com/800x600/?landscape,grass" alt="Window 1">
-            <button class="arrow right">&#10095;</button>
+        <div class="slides">
+            <img src="images/img1.jpg" class="slide active" />
+            <img src="images/img2.jpg" class="slide" />
+            <img src="images/img3.jpg" class="slide" />
+            <img src="images/img4.jpg" class="slide" />
         </div>
 
-        <!-- Window 2 -->
-        <div class="image-card" data-images="
-            https://source.unsplash.com/800x600/?garden,trees,1,
-            https://source.unsplash.com/800x600/?garden,plants,2,
-            https://source.unsplash.com/800x600/?garden,flowers,3
-        ">
-            <button class="arrow left">&#10094;</button>
-            <img src="https://source.unsplash.com/800x600/?garden,trees" alt="Window 2">
-            <button class="arrow right">&#10095;</button>
-        </div>
-
-        <!-- Window 3 -->
-        <div class="image-card" data-images="
-            https://source.unsplash.com/800x600/?tree,landscaping,1,
-            https://source.unsplash.com/800x600/?tree,cutting,2,
-            https://source.unsplash.com/800x600/?trees,green,3
-        ">
-            <button class="arrow left">&#10094;</button>
-            <img src="https://source.unsplash.com/800x600/?tree,landscaping" alt="Window 3">
-            <button class="arrow right">&#10095;</button>
-        </div>
-
-        <!-- Window 4 -->
-        <div class="image-card" data-images="
-            https://source.unsplash.com/800x600/?yard,landscape,1,
-            https://source.unsplash.com/800x600/?yard,grass,2,
-            https://source.unsplash.com/800x600/?yard,plants,3
-        ">
-            <button class="arrow left">&#10094;</button>
-            <img src="https://source.unsplash.com/800x600/?yard,landscape" alt="Window 4">
-            <button class="arrow right">&#10095;</button>
-        </div>
-
+        <button class="arrow right">&#10095;</button>
     </div>
 </section>
 
 <section id="about" class="about-section">
-    <h2>About Us</h2>
-    <p>Cedar Landscape provides professional landscaping and garden design with over 10 years of experience.</p>
-</section>
-
-<section id="contact" class="contact-section">
-    <h2>Contact</h2>
-    <p>Email: contact@cedar-landscape.com</p>
-    <p>Phone: (123) 555-4567</p>
+    <h2>About Cedar Landscape</h2>
+    <p>We create beautiful, long-lasting outdoor spaces with expert craftsmanship.</p>
 </section>
 
 <footer>
-    <p>&copy; <span id="year"></span> Cedar Landscape. All rights reserved.</p>
+    <p>&copy; 2025 Cedar Landscape. All rights reserved.</p>
 </footer>
 
 <script>
-// Put the current year automatically
-document.getElementById("year").textContent = new Date().getFullYear();
-
-// Image-switching for each card
-document.querySelectorAll(".image-card").forEach(card => {
-    const img = card.querySelector("img");
-    const arrows = card.querySelectorAll(".arrow");
-    const images = card.getAttribute("data-images").split(",").map(i => i.trim());
-
+    const slides = document.querySelectorAll(".slide");
+    const left = document.querySelector(".left");
+    const right = document.querySelector(".right");
     let index = 0;
 
-    function updateImage(direction) {
-        index = (index + direction + images.length) % images.length;
-        img.src = images[index];
+    function updateSlide() {
+        slides.forEach((s, i) => s.classList.toggle("active", i === index));
     }
 
-    arrows[0].addEventListener("click", () => updateImage(-1)); // left
-    arrows[1].addEventListener("click", () => updateImage(1));  // right
-});
+    left.onclick = () => {
+        index = (index - 1 + slides.length) % slides.length;
+        updateSlide();
+    };
+
+    right.onclick = () => {
+        index = (index + 1) % slides.length;
+        updateSlide();
+    };
 </script>
 
 </body>
