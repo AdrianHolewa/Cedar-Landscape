@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenScape Landscaping</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Cedar Landscape</title>
+    <link rel="css.css" href="css.css">
 </head>
 
 <body>
 
-<header>
-    <h1>GreenScape Landscaping</h1>
+<header class="site-header">
+    <h1>Cedar Landscape</h1>
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#about">About Us</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -26,40 +26,93 @@
 </section>
 
 <section id="services" class="services-section">
-    <h2>Our Services</h2>
+    <h2>Our Work</h2>
 
-    <div class="services">
-        <div class="service-card">
-            <h3>Lawn Care</h3>
-            <p>Complete lawn maintenance and care packages.</p>
+    <div class="image-grid">
+
+        <!-- Window 1 -->
+        <div class="image-card" data-images="
+            https://source.unsplash.com/800x600/?landscape,grass,1,
+            https://source.unsplash.com/800x600/?garden,design,2,
+            https://source.unsplash.com/800x600/?lawn,green,3
+        ">
+            <button class="arrow left">&#10094;</button>
+            <img src="https://source.unsplash.com/800x600/?landscape,grass" alt="Window 1">
+            <button class="arrow right">&#10095;</button>
         </div>
 
-        <div class="service-card">
-            <h3>Garden Design</h3>
-            <p>Custom garden designs tailored to your vision.</p>
+        <!-- Window 2 -->
+        <div class="image-card" data-images="
+            https://source.unsplash.com/800x600/?garden,trees,1,
+            https://source.unsplash.com/800x600/?garden,plants,2,
+            https://source.unsplash.com/800x600/?garden,flowers,3
+        ">
+            <button class="arrow left">&#10094;</button>
+            <img src="https://source.unsplash.com/800x600/?garden,trees" alt="Window 2">
+            <button class="arrow right">&#10095;</button>
         </div>
 
-        <div class="service-card">
-            <h3>Tree Trimming</h3>
-            <p>Safe and professional trimming and removal.</p>
+        <!-- Window 3 -->
+        <div class="image-card" data-images="
+            https://source.unsplash.com/800x600/?tree,landscaping,1,
+            https://source.unsplash.com/800x600/?tree,cutting,2,
+            https://source.unsplash.com/800x600/?trees,green,3
+        ">
+            <button class="arrow left">&#10094;</button>
+            <img src="https://source.unsplash.com/800x600/?tree,landscaping" alt="Window 3">
+            <button class="arrow right">&#10095;</button>
         </div>
+
+        <!-- Window 4 -->
+        <div class="image-card" data-images="
+            https://source.unsplash.com/800x600/?yard,landscape,1,
+            https://source.unsplash.com/800x600/?yard,grass,2,
+            https://source.unsplash.com/800x600/?yard,plants,3
+        ">
+            <button class="arrow left">&#10094;</button>
+            <img src="https://source.unsplash.com/800x600/?yard,landscape" alt="Window 4">
+            <button class="arrow right">&#10095;</button>
+        </div>
+
     </div>
 </section>
 
 <section id="about" class="about-section">
     <h2>About Us</h2>
-    <p>At GreenScape Landscaping, we deliver high-quality landscaping with over 10 years of experience.</p>
+    <p>Cedar Landscape provides professional landscaping and garden design with over 10 years of experience.</p>
 </section>
 
 <section id="contact" class="contact-section">
-    <h2>Contact Us</h2>
-    <p>Email: youremail@domain.com</p>
-    <p>Phone: (123) 456-7890</p>
+    <h2>Contact</h2>
+    <p>Email: contact@cedar-landscape.com</p>
+    <p>Phone: (123) 555-4567</p>
 </section>
 
 <footer>
-    <p>&copy; 2025 GreenScape Landscaping. All rights reserved.</p>
+    <p>&copy; <span id="year"></span> Cedar Landscape. All rights reserved.</p>
 </footer>
+
+<script>
+// Put the current year automatically
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Image-switching for each card
+document.querySelectorAll(".image-card").forEach(card => {
+    const img = card.querySelector("img");
+    const arrows = card.querySelectorAll(".arrow");
+    const images = card.getAttribute("data-images").split(",").map(i => i.trim());
+
+    let index = 0;
+
+    function updateImage(direction) {
+        index = (index + direction + images.length) % images.length;
+        img.src = images[index];
+    }
+
+    arrows[0].addEventListener("click", () => updateImage(-1)); // left
+    arrows[1].addEventListener("click", () => updateImage(1));  // right
+});
+</script>
 
 </body>
 </html>
