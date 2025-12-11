@@ -20,7 +20,7 @@
     gap: 35px;
 }
 
-/* STRIKING FONT for navbar */
+/* Striking navbar font */
 .nav-links li a {
     text-decoration: none;
     color: #fff;
@@ -60,5 +60,14 @@
 }
 
 .highlight-section p {
-    margin-bottom: 22px; /* More spacing between paragraphs */
+    margin-bottom: 22px; /* spacing between paragraphs */
+}
+
+/* Last sentence styling */
+.highlight-sentence {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px; /* bigger */
+    font-weight: 700;
+    color: #2e7d32;
+    margin-top: 30px;
 }
