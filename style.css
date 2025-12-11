@@ -1,18 +1,17 @@
-/* Reset default margins and paddings */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-/* Navbar styling */
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    background-color: #2e7d32; /* Dark green */
+    background-color: #2e7d32;
 }
 
 .nav-links {
@@ -21,64 +20,41 @@
     gap: 30px;
 }
 
+/* Fancy font for navbar */
 .nav-links li a {
     text-decoration: none;
     color: #fff;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s;
 }
 
 .nav-links li a:hover {
-    color: #a5d6a7; /* Lighter green on hover */
+    color: #c8e6c9;
 }
 
 .logo img {
     height: 50px;
-    width: auto;
 }
 
-/* Hero section */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: url('garden.jpg') no-repeat center center/cover;
-    color: #fff;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 24px;
-}
-
-/* Home & Info sections */
-.home-section, .info-section {
-    padding: 50px 20px;
+/* Info section */
+.info-section {
     max-width: 1000px;
     margin: auto;
+    padding: 50px 20px;
 }
 
-.home-section h2, .info-section h2 {
-    color: #2e7d32;
-    margin-bottom: 20px;
-}
-
-.info-section ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-/* Highlighted bordered section */
+/* Bordered box with aesthetic spacing */
 .highlight-section {
-    border: 3px solid #a5d6a7; /* Light green border */
+    border: 3px solid #a5d6a7;
     border-radius: 15px;
-    padding: 30px;
-    background-color: #f0f8f5; /* Very light green background */
+    padding: 40px;
+    background-color: #f0f8f5;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    margin-top: 30px;
-    line-height: 1.7;
+    font-family: 'Poppins', sans-serif; /* Clean, modern font */
+    line-height: 1.9;
+    font-size: 18px;
+    letter-spacing: 0.3px;
 }
