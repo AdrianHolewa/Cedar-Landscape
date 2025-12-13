@@ -82,3 +82,16 @@ body { font-family:'Lora', serif; background-color:#ffffff; color:#333; }
     .review-img{ margin-bottom:10px; }
     .highlight-sentence{ text-align:center; }
 }
+✅ Instructions to make it work:
+Create a Firebase project and Realtime Database.
+
+Set rules temporarily to:
+
+json
+Copy code
+{
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
