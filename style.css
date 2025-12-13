@@ -2,18 +2,19 @@
 .container {
     display: flex;
     gap: 40px; /* space between boxes */
-    justify-content: flex-end; /* move boxes to the right */
     flex-wrap: wrap; /* stack on smaller screens */
 }
 
-/* Info box (original) */
+/* Move the first box 2/3 to the right */
 .info-box {
-    flex: 1 1 400px; /* grow/shrink with min width */
+    flex: 1 1 400px;
+    margin-left: 66%; /* pushes the box ~2/3 across the page */
 }
 
 /* Jobs box */
 .jobs-box {
     flex: 1 1 300px;
+    margin-left: -50px; /* optional, to bring it closer to the first box */
 }
 
 .jobs-box h2 {
@@ -36,9 +37,15 @@
     .container {
         flex-direction: column;
         justify-content: center;
+        margin-left: 0; /* reset for mobile */
     }
 
     .highlight-sentence {
         text-align: center;
+    }
+
+    .info-box, .jobs-box {
+        flex: 1 1 100%;
+        margin-left: 0;
     }
 }
