@@ -78,7 +78,7 @@
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 
 <script>
-    // TODO: Replace with your Firebase project config
+    // Firebase configuration (replace with your own project config)
     const firebaseConfig = {
         apiKey: "YOUR_API_KEY",
         authDomain: "your-project.firebaseapp.com",
@@ -113,7 +113,7 @@
         const hash = md5(email);
         const avatarUrl = `https://www.gravatar.com/avatar/${hash}?d=identicon&s=60`;
 
-        // Push to Firebase
+        // Push review to Firebase
         const newReviewRef = database.ref('reviews').push();
         newReviewRef.set({
             name: name,
@@ -125,7 +125,7 @@
         form.reset();
     });
 
-    // Function to add review to page
+    // Add review to page
     function addReviewToPage(name, email, reviewText, avatarUrl) {
         const reviewDiv = document.createElement('div');
         reviewDiv.classList.add('review');
