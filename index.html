@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenScape Landscaping</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;700&family=Lora:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -20,7 +17,6 @@
             <li><a href="job.html">Jobs</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-
         <div class="logo">
             <a href="index.html">
                 <img src="folder/Img1.png" alt="GreenScape Logo">
@@ -36,11 +32,8 @@
             <!-- Original Info Box -->
             <div class="highlight-section info-box">
                 <p>Whether you’re looking to make small updates or completely transform your garden, we’re here to help. With over 25 years of landscaping experience, we offer a full range of services including patios, paving, driveways, decking, planting, lighting, and ongoing maintenance.</p>
-
                 <p>Each project is discussed and reviewed on-site with both the employer and the property owners to confirm your vision and requirements in detail. During this stage, we also provide a tailored quote that aligns with your budget.</p>
-
                 <p>Based in Munster, we’ve completed extensive landscaping work across Kerry, Cork, and Limerick, working on both private gardens and public projects.</p>
-
                 <p class="highlight-sentence">Cedar: Experience You Can Trust, Results You’ll Love.</p>
             </div>
 
@@ -64,25 +57,21 @@
         <div class="reviews-box highlight-section">
             <h2 class="reviews-title">Customer Reviews</h2>
 
-            <!-- Existing reviews with profile pictures -->
+            <!-- Existing reviews -->
             <div class="review">
-                <img src="folder/profile1.jpg" alt="Jane D." class="review-img">
+                <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=identicon" alt="Jane D." class="review-img">
                 <p class="review-text">"Amazing service! Our garden has never looked better." <span>- Jane D.</span></p>
             </div>
             <div class="review">
-                <img src="folder/profile2.jpg" alt="Mark S." class="review-img">
+                <img src="https://www.gravatar.com/avatar/11111111111111111111111111111111?d=identicon" alt="Mark S." class="review-img">
                 <p class="review-text">"Professional and reliable. Highly recommended!" <span>- Mark S.</span></p>
-            </div>
-            <div class="review">
-                <img src="folder/profile3.jpg" alt="Laura K." class="review-img">
-                <p class="review-text">"Beautiful design and excellent attention to detail." <span>- Laura K.</span></p>
             </div>
 
             <!-- Review Form -->
             <form class="review-form" id="reviewForm">
                 <h3>Submit Your Review</h3>
                 <input type="text" id="name" placeholder="Your Name" required>
-                <input type="url" id="profile" placeholder="Your Google Profile Picture URL" required>
+                <input type="email" id="email" placeholder="Your Email" required>
                 <textarea id="review" placeholder="Your Review" rows="4" required></textarea>
                 <button type="submit">Submit Review</button>
             </form>
@@ -91,24 +80,33 @@
     </section>
 </main>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js"></script>
 <script>
     const form = document.getElementById('reviewForm');
     const reviewsBox = document.querySelector('.reviews-box');
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        const name = document.getElementById('name').value;
-        const review = document.getElementById('review').value;
-        const profile = document.getElementById('profile').value;
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim().toLowerCase();
+        const reviewText = document.getElementById('review').value.trim();
 
-        // Create new review element
+        // Generate MD5 hash of the email for Gravatar
+        const hash = md5(email);
+        const avatarUrl = `https://www.gravatar.com/avatar/${hash}?d=identicon&s=60`;
+
+        // Create new review
         const newReview = document.createElement('div');
         newReview.classList.add('review');
         newReview.innerHTML = `
-            <img src="${profile}" alt="${name}" class="review-img">
-            <p class="review-text">"${review}" <span>- ${name}</span></p>
+            <img src="${avatarUrl}" alt="${name}" class="review-img">
+            <p class="review-text">"${reviewText}" <span>- ${name}</span></p>
         `;
+
+        // Add to reviews box before the form
         reviewsBox.insertBefore(newReview, form);
+
+        // Reset form
         form.reset();
     });
 </script>
