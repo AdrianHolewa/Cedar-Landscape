@@ -64,21 +64,25 @@
         <div class="reviews-box highlight-section">
             <h2 class="reviews-title">Customer Reviews</h2>
 
-            <!-- Existing reviews -->
+            <!-- Existing reviews with profile pictures -->
             <div class="review">
-                <p>"Amazing service! Our garden has never looked better." <span>- Jane D.</span></p>
+                <img src="folder/profile1.jpg" alt="Jane D." class="review-img">
+                <p class="review-text">"Amazing service! Our garden has never looked better." <span>- Jane D.</span></p>
             </div>
             <div class="review">
-                <p>"Professional and reliable. Highly recommended!" <span>- Mark S.</span></p>
+                <img src="folder/profile2.jpg" alt="Mark S." class="review-img">
+                <p class="review-text">"Professional and reliable. Highly recommended!" <span>- Mark S.</span></p>
             </div>
             <div class="review">
-                <p>"Beautiful design and excellent attention to detail." <span>- Laura K.</span></p>
+                <img src="folder/profile3.jpg" alt="Laura K." class="review-img">
+                <p class="review-text">"Beautiful design and excellent attention to detail." <span>- Laura K.</span></p>
             </div>
 
             <!-- Review Form -->
             <form class="review-form" id="reviewForm">
                 <h3>Submit Your Review</h3>
                 <input type="text" id="name" placeholder="Your Name" required>
+                <input type="url" id="profile" placeholder="Your Google Profile Picture URL" required>
                 <textarea id="review" placeholder="Your Review" rows="4" required></textarea>
                 <button type="submit">Submit Review</button>
             </form>
@@ -87,7 +91,6 @@
     </section>
 </main>
 
-<!-- Optional JS for demo -->
 <script>
     const form = document.getElementById('reviewForm');
     const reviewsBox = document.querySelector('.reviews-box');
@@ -96,16 +99,16 @@
         e.preventDefault();
         const name = document.getElementById('name').value;
         const review = document.getElementById('review').value;
+        const profile = document.getElementById('profile').value;
 
-        // Create a new review element
+        // Create new review element
         const newReview = document.createElement('div');
         newReview.classList.add('review');
-        newReview.innerHTML = `<p>"${review}" <span>- ${name}</span></p>`;
-
-        // Add it to the reviews box
+        newReview.innerHTML = `
+            <img src="${profile}" alt="${name}" class="review-img">
+            <p class="review-text">"${review}" <span>- ${name}</span></p>
+        `;
         reviewsBox.insertBefore(newReview, form);
-
-        // Clear form
         form.reset();
     });
 </script>
