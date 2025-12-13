@@ -29,7 +29,7 @@
     <section class="info-section">
         <div class="container">
 
-            <!-- Original Info Box -->
+            <!-- Info Box -->
             <div class="highlight-section info-box">
                 <p>Whether you’re looking to make small updates or completely transform your garden, we’re here to help. With over 25 years of landscaping experience, we offer a full range of services including patios, paving, driveways, decking, planting, lighting, and ongoing maintenance.</p>
                 <p>Each project is discussed and reviewed on-site with both the employer and the property owners to confirm your vision and requirements in detail. During this stage, we also provide a tailored quote that aligns with your budget.</p>
@@ -59,11 +59,15 @@
 
             <!-- Existing reviews -->
             <div class="review">
-                <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=identicon" alt="Jane D." class="review-img">
+                <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&s=60" 
+                     alt="Jane D." class="review-img" 
+                     title="jane@example.com">
                 <p class="review-text">"Amazing service! Our garden has never looked better." <span>- Jane D.</span></p>
             </div>
             <div class="review">
-                <img src="https://www.gravatar.com/avatar/11111111111111111111111111111111?d=identicon" alt="Mark S." class="review-img">
+                <img src="https://www.gravatar.com/avatar/11111111111111111111111111111111?d=identicon&s=60" 
+                     alt="Mark S." class="review-img" 
+                     title="mark@example.com">
                 <p class="review-text">"Professional and reliable. Highly recommended!" <span>- Mark S.</span></p>
             </div>
 
@@ -80,33 +84,33 @@
     </section>
 </main>
 
+<!-- MD5 for Gravatar -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js"></script>
+
 <script>
     const form = document.getElementById('reviewForm');
     const reviewsBox = document.querySelector('.reviews-box');
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
+
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim().toLowerCase();
         const reviewText = document.getElementById('review').value.trim();
 
-        // Generate MD5 hash of the email for Gravatar
+        // Generate Gravatar URL
         const hash = md5(email);
         const avatarUrl = `https://www.gravatar.com/avatar/${hash}?d=identicon&s=60`;
 
-        // Create new review
+        // Create review element
         const newReview = document.createElement('div');
         newReview.classList.add('review');
         newReview.innerHTML = `
-            <img src="${avatarUrl}" alt="${name}" class="review-img">
+            <img src="${avatarUrl}" alt="${name}" class="review-img" title="${email}">
             <p class="review-text">"${reviewText}" <span>- ${name}</span></p>
         `;
 
-        // Add to reviews box before the form
         reviewsBox.insertBefore(newReview, form);
-
-        // Reset form
         form.reset();
     });
 </script>
