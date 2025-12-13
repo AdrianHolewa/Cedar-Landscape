@@ -37,31 +37,9 @@
         <p><strong>Location:</strong> Munster, Ireland</p>
         <p><strong>Business Hours:</strong> Mon-Fri 9:00 AM - 5:00 PM</p>
       </div>
-
-      <form id="contactForm" class="contact-form">
-        <h3>Send Us a Message</h3>
-        <input type="text" id="contactName" placeholder="Your Name" required>
-        <input type="email" id="contactEmail" placeholder="Your Email" required>
-        <textarea id="contactMessage" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-
-      <p id="confirmation" style="color:green; margin-top:15px; display:none;">Thank you! Your message has been sent.</p>
     </div>
   </section>
 </main>
-
-<script>
-  const form = document.getElementById('contactForm');
-  const confirmation = document.getElementById('confirmation');
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    // Add Firebase or backend logic here if needed
-    confirmation.style.display = 'block';
-    form.reset();
-  });
-</script>
 
 </body>
 </html>
