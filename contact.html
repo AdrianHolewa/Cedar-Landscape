@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Cedar Landscapes</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;700&family=Lora:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
 
+<header>
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="logo">
+        <a href="index.html"><img src="folder/Img1.png" alt="Logo"></a>
+      </div>
+      <h1 class="nav-heading">Cedar Landscapes</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="job.html">Jobs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="contact-section">
+    <div class="contact-box highlight-section">
+      <h2 class="contact-title">Contact Us</h2>
+
+      <div class="contact-info">
+        <p><strong>Employer:</strong> John Doe</p>
+        <p><strong>Email:</strong> info@cedarlandscapes.com</p>
+        <p><strong>Phone:</strong> +353 123 456 789</p>
+        <p><strong>Location:</strong> Munster, Ireland</p>
+        <p><strong>Business Hours:</strong> Mon-Fri 9:00 AM - 5:00 PM</p>
+      </div>
+
+      <form id="contactForm" class="contact-form">
+        <h3>Send Us a Message</h3>
+        <input type="text" id="contactName" placeholder="Your Name" required>
+        <input type="email" id="contactEmail" placeholder="Your Email" required>
+        <textarea id="contactMessage" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <p id="confirmation" style="color:green; margin-top:15px; display:none;">Thank you! Your message has been sent.</p>
+    </div>
+  </section>
+</main>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const confirmation = document.getElementById('confirmation');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Add Firebase or backend logic here if needed
+    confirmation.style.display = 'block';
+    form.reset();
+  });
+</script>
+
+</body>
+</html>
