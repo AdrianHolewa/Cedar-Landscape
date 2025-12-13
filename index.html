@@ -59,15 +59,17 @@
 
             <!-- Existing reviews -->
             <div class="review">
-                <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&s=60" 
-                     alt="Jane D." class="review-img" 
-                     title="jane@example.com">
+                <div class="avatar-wrapper" title="jane@example.com">
+                    <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&s=60" 
+                         alt="Jane D." class="review-img">
+                </div>
                 <p class="review-text">"Amazing service! Our garden has never looked better." <span>- Jane D.</span></p>
             </div>
             <div class="review">
-                <img src="https://www.gravatar.com/avatar/11111111111111111111111111111111?d=identicon&s=60" 
-                     alt="Mark S." class="review-img" 
-                     title="mark@example.com">
+                <div class="avatar-wrapper" title="mark@example.com">
+                    <img src="https://www.gravatar.com/avatar/11111111111111111111111111111111?d=identicon&s=60" 
+                         alt="Mark S." class="review-img">
+                </div>
                 <p class="review-text">"Professional and reliable. Highly recommended!" <span>- Mark S.</span></p>
             </div>
 
@@ -84,7 +86,7 @@
     </section>
 </main>
 
-<!-- MD5 for Gravatar -->
+<!-- MD5 library for Gravatar -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js"></script>
 
 <script>
@@ -93,7 +95,6 @@
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim().toLowerCase();
         const reviewText = document.getElementById('review').value.trim();
@@ -102,11 +103,13 @@
         const hash = md5(email);
         const avatarUrl = `https://www.gravatar.com/avatar/${hash}?d=identicon&s=60`;
 
-        // Create review element
+        // Create new review element
         const newReview = document.createElement('div');
         newReview.classList.add('review');
         newReview.innerHTML = `
-            <img src="${avatarUrl}" alt="${name}" class="review-img" title="${email}">
+            <div class="avatar-wrapper" title="${email}">
+                <img src="${avatarUrl}" alt="${name}" class="review-img">
+            </div>
             <p class="review-text">"${reviewText}" <span>- ${name}</span></p>
         `;
 
