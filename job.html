@@ -13,17 +13,39 @@
   <nav class="navbar">
     <div class="nav-left">
       <div class="logo">
-        <a href="#"><img src="folder/Img1.png" alt="Logo"></a>
+        <a href="index.html"><img src="folder/Img1.png" alt="Logo"></a>
       </div>
       <h1 class="nav-heading">Cedar Landscapes</h1>
     </div>
     <ul class="nav-links">
-     <li><a href="index.html">Home</a></li>
-     <li><a href="job.html">Jobs</a></li>
-     <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="job.html">Jobs</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
+
+<main>
+  <section class="job-details">
+    <div class="container info-box">
+      <h1 id="jobTitle">Job Details</h1>
+      <p id="jobDescription">Learn more about this service and how Cedar Landscapes can help.</p>
+    </div>
+  </section>
+
+  <script>
+    // Get URL parameter "title"
+    const params = new URLSearchParams(window.location.search);
+    const title = params.get('title');
+
+    if(title) {
+      document.getElementById('jobTitle').textContent = title;
+      document.title = title + " - Cedar Landscapes";
+      document.getElementById('jobDescription').textContent = 
+        `Learn more about ${title.toLowerCase()} and how Cedar Landscapes can help.`;
+    }
+  </script>
+</main>
 
 </body>
 </html>
