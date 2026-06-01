@@ -1,3 +1,6 @@
+### style.css
+
+```css
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +19,7 @@ body {
 }
 
 /* HERO */
+
 .hero {
   height: 100vh;
   background:
@@ -27,6 +31,7 @@ body {
 }
 
 /* NAVBAR */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -52,7 +57,6 @@ body {
   font-weight: 600;
 }
 
-/* Hover underline animation */
 .navbar a::after {
   content: '';
   position: absolute;
@@ -69,6 +73,7 @@ body {
 }
 
 /* HERO CONTENT */
+
 .hero-content {
   text-align: center;
   margin-top: 180px;
@@ -103,6 +108,7 @@ body {
 }
 
 /* ABOUT */
+
 .about {
   padding: 80px 20px;
   text-align: center;
@@ -125,6 +131,7 @@ body {
 }
 
 /* SERVICES */
+
 .services {
   padding: 80px 20px;
   background: white;
@@ -161,36 +168,55 @@ body {
   background: #c8e6c9;
 }
 
-/* REVIEWS */
-.reviews {
-  padding: 80px 20px;
+/* WHY US */
+
+.why-us {
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+  color: white;
   text-align: center;
 }
 
-.reviews h2 {
-  margin-bottom: 40px;
-  color: #2e7d32;
+.why-us h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  font-family: 'Playfair Display', serif;
 }
 
-.review-box {
-  background: white;
-  padding: 25px;
-  margin: 20px auto;
-  max-width: 600px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.stats-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
 }
 
-.review-box p {
-  font-style: italic;
+.stat-card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  padding: 35px 20px;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255,255,255,0.15);
+}
+
+.stat-card span {
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
-.review-box span {
-  font-weight: 600;
+.stat-card p {
+  font-size: 1.1rem;
 }
 
 /* CONTACT */
+
 .contact {
   padding: 80px 20px;
   text-align: center;
@@ -207,6 +233,7 @@ body {
 }
 
 /* FOOTER */
+
 footer {
   text-align: center;
   padding: 20px;
@@ -215,6 +242,7 @@ footer {
 }
 
 /* MOBILE */
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -239,8 +267,9 @@ footer {
   }
 
   .services h2,
-  .reviews h2,
+  .why-us h2,
   .contact h2 {
     font-size: 1.8rem;
   }
 }
+```
