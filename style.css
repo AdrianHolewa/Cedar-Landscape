@@ -4,17 +4,23 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background: #f4f7f5;
   color: #333;
+  line-height: 1.6;
 }
 
 /* HERO */
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');
   background-size: cover;
   background-position: center;
   color: white;
@@ -28,6 +34,11 @@ body {
   padding: 20px 40px;
 }
 
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+}
+
 .navbar ul {
   list-style: none;
   display: flex;
@@ -38,6 +49,7 @@ body {
   color: white;
   text-decoration: none;
   position: relative;
+  font-weight: 600;
 }
 
 /* Hover underline animation */
@@ -49,65 +61,88 @@ body {
   background: #4CAF50;
   left: 0;
   bottom: -5px;
-  transition: 0.3s;
+  transition: width 0.3s ease;
 }
 
 .navbar a:hover::after {
   width: 100%;
 }
 
-/* HERO TEXT */
+/* HERO CONTENT */
 .hero-content {
   text-align: center;
   margin-top: 180px;
+  padding: 0 20px;
 }
 
 .hero-content h2 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
 }
 
 .btn {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 25px;
   background: #4CAF50;
-  padding: 12px 25px;
+  padding: 12px 28px;
   border-radius: 30px;
   text-decoration: none;
   color: white;
-  transition: 0.3s;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
   background: #388e3c;
+  transform: translateY(-2px);
 }
 
 /* ABOUT */
 .about {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.about p {
+  font-size: 1.1rem;
+}
+
 .highlight {
-  margin-top: 15px;
+  margin-top: 20px;
   font-weight: bold;
   color: #2e7d32;
+  font-size: 1.2rem;
 }
 
 /* SERVICES */
 .services {
-  padding: 60px 20px;
+  padding: 80px 20px;
   background: white;
 }
 
 .services h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  color: #2e7d32;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .card {
@@ -115,8 +150,10 @@ body {
   padding: 25px;
   border-radius: 15px;
   text-align: center;
-  transition: 0.3s;
+  transition: all 0.3s ease;
   cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
 
 .card:hover {
@@ -126,25 +163,47 @@ body {
 
 /* REVIEWS */
 .reviews {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
+}
+
+.reviews h2 {
+  margin-bottom: 40px;
+  color: #2e7d32;
 }
 
 .review-box {
   background: white;
-  padding: 20px;
-  margin: 15px auto;
-  max-width: 500px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 600px;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
+.review-box p {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.review-box span {
+  font-weight: 600;
+}
+
 /* CONTACT */
 .contact {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
   background: #2e7d32;
   color: white;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+.contact p {
+  margin: 10px 0;
 }
 
 /* FOOTER */
@@ -157,12 +216,31 @@ footer {
 
 /* MOBILE */
 @media (max-width: 768px) {
-  .hero-content h2 {
-    font-size: 2rem;
-  }
-
   .navbar {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-content {
+    margin-top: 140px;
+  }
+
+  .hero-content h2 {
+    font-size: 2.3rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .services h2,
+  .reviews h2,
+  .contact h2 {
+    font-size: 1.8rem;
   }
 }
