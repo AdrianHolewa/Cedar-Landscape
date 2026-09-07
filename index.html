@@ -1,180 +1,329 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cedar Landscapes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css">
+    <title>Cedar Landscapes</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="hero">
 
-  <nav class="navbar">
-    <h1 class="logo">Cedar Landscapes</h1>
+    <!-- =========================
+         HERO
+    ========================== -->
 
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <header class="hero" id="home">
 
-  <div class="hero-content">
-    <h2>Transform Your Outdoor Space</h2>
+        <nav>
+            <a href="index.html" class="logo">Cedar Landscapes</a>
 
-    <p>25+ years of landscaping expertise across Munster</p>
-
-    <a href="#services" class="btn">
-      View Services
-    </a>
-  </div>
-
-</header>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
 
 
-<section class="about">
+        <div class="hero-content">
 
-  <div class="container">
+            <h1>Transform Your Outdoor Space</h1>
 
-    <p>
-      Whether you're looking to make small updates or completely transform your garden, we're here to help.
-      We offer patios, paving, driveways, decking, planting, lighting, fencing,
-      lawns, pergolas, tree clearance, drainage and maintenance.
-    </p>
+            <p>
+                25+ years of landscaping expertise across Munster
+            </p>
 
-    <p class="highlight">
-      Cedar: Experience You Can Trust, Results You'll Love.
-    </p>
+            <a href="#services" class="btn">
+                View Services
+            </a>
 
-  </div>
+        </div>
 
-</section>
+    </header>
 
 
-<section id="services" class="services">
+    <!-- =========================
+         ABOUT
+    ========================== -->
 
-  <h2>Our Services</h2>
+    <section class="about">
 
-  <div class="grid">
+        <div class="container">
 
-    <!-- CEDAR / PLANTING IMAGE FIRST -->
-    <a href="patios.html"
-       class="card"
-       style="background-image: url('https://i.pinimg.com/736x/e4/d3/05/e4d3050a84c0efb081cea66e162b4ed4.jpg');">
-      <span>Patios</span>
-    </a>
+            <h2>About Cedar Landscapes</h2>
 
-    <a href="paving.html"
-       class="card"
-       style="background-image: url('https://alto2-live.s3.amazonaws.com/kj9Ac7FOEPQl3HWOaEdAf_CK7aI/j270D5LTwS_j4GdV6DKLuAo2i94/Photo/%5B3%5D/yl_3RUvhCkmpGXHxVkn8IA.jpg');">
-      <span>Paving</span>
-    </a>
-
-    <a href="driveways.html"
-       class="card"
-       style="background-image: url('https://realestatesoftware.ie/resoffice/intranet/uploads/property_images/res_office_tormey_lee/2546_RA_22.jpg');">
-      <span>Driveways</span>
-    </a>
-
-    <a href="decking.html"
-       class="card"
-       style="background-image: url('https://www.garden.eco/img/image6_composite-decking-designs-ideas_add-a-pergola-for-shade.jpg');">
-      <span>Decking</span>
-    </a>
-
-    <a href="planting.html"
-       class="card"
-       style="background-image: url('https://i.pinimg.com/736x/e4/d3/05/e4d3050a84c0efb081cea66e162b4ed4.jpg');">
-      <span>Planting</span>
-    </a>
-
-    <a href="lighting.html"
-       class="card"
-       style="background-image: url('https://realestatesoftware.ie/resoffice/intranet/uploads/property_images/res_office_tormey_lee/2546_RA_22.jpg');">
-      <span>Lighting</span>
-    </a>
-
-    <a href="fencing.html"
-       class="card"
-       style="background-image: url('https://realestatesoftware.ie/resoffice/intranet/uploads/property_images/res_office_tormey_lee/2546_RA_22.jpg');">
-      <span>Fencing</span>
-    </a>
-
-    <a href="lawns.html"
-       class="card"
-       style="background-image: url('https://realestatesoftware.ie/resoffice/intranet/uploads/property_images/res_office_tormey_lee/2546_RA_22.jpg');">
-      <span>Lawns</span>
-    </a>
-
-    <a href="pergolas.html"
-       class="card"
-       style="background-image: url('https://www.garden.eco/img/image6_composite-decking-designs-ideas_add-a-pergola-for-shade.jpg');">
-      <span>Pergolas</span>
-    </a>
-
-    <a href="tree-clearance.html"
-       class="card"
-       style="background-image: url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=80');">
-      <span>Tree Clearance</span>
-    </a>
-
-    <a href="drainage.html"
-       class="card"
-       style="background-image: url('https://alto2-live.s3.amazonaws.com/kj9Ac7FOEPQl3HWOaEdAf_CK7aI/j270D5LTwS_j4GdV6DKLuAo2i94/Photo/%5B3%5D/yl_3RUvhCkmpGXHxVkn8IA.jpg');">
-      <span>Drainage</span>
-    </a>
-
-    <a href="maintenance.html"
-       class="card"
-       style="background-image: url('https://realestatesoftware.ie/resoffice/intranet/uploads/property_images/res_office_tormey_lee/2546_RA_22.jpg');">
-      <span>Maintenance</span>
-    </a>
-
-  </div>
-
-</section>
+            <p>
+                Whether you're looking to make small updates or completely
+                transform your garden, we're here to help. We offer patios,
+                paving, driveways, decking, planting, lighting, fencing,
+                lawns, pergolas, tree clearance, drainage and maintenance.
+            </p>
 
 
-<section class="showcase">
+            <div class="highlight">
 
-  <div class="showcase-content">
+                <h3>
+                    Cedar: Experience You Can Trust, Results You'll Love.
+                </h3>
 
-    <h2>Creating Beautiful Outdoor Spaces Since 2000</h2>
+                <p>
+                    We combine years of landscaping experience with quality
+                    workmanship to create outdoor spaces that look great
+                    and last for years.
+                </p>
 
-    <p>
-      From patios and driveways to complete garden transformations,
-      Cedar Landscapes delivers craftsmanship, reliability and
-      attention to detail on every project.
-    </p>
+            </div>
 
-    <a href="#contact" class="btn">
-      Get a Free Quote
-    </a>
+        </div>
 
-  </div>
-
-</section>
+    </section>
 
 
-<section id="contact" class="contact">
+    <!-- =========================
+         SERVICES
+    ========================== -->
 
-  <h2>Contact Us</h2>
+    <section class="services" id="services">
 
-  <p>Email: info@cedarlandscapes.ie</p>
+        <div class="container">
 
-  <p>Serving Cork and all of Munster</p>
-
-</section>
+            <h2>Our Services</h2>
 
 
-<footer>
-  <p>© 2026 Cedar Landscapes. All Rights Reserved.</p>
-</footer>
+            <div class="grid">
+
+
+                <a href="patios.html" class="card">
+
+                    <h3>Patios</h3>
+
+                    <p>
+                        Beautiful and durable patio areas designed
+                        for relaxing and entertaining.
+                    </p>
+
+                </a>
+
+
+                <a href="paving.html" class="card">
+
+                    <h3>Paving</h3>
+
+                    <p>
+                        Quality paving solutions to transform
+                        your outdoor space.
+                    </p>
+
+                </a>
+
+
+                <a href="driveways.html" class="card">
+
+                    <h3>Driveways</h3>
+
+                    <p>
+                        Practical and attractive driveways
+                        built to last.
+                    </p>
+
+                </a>
+
+
+                <a href="decking.html" class="card">
+
+                    <h3>Decking</h3>
+
+                    <p>
+                        Stylish decking areas perfect for
+                        outdoor living.
+                    </p>
+
+                </a>
+
+
+                <a href="planting.html" class="card">
+
+                    <h3>Planting</h3>
+
+                    <p>
+                        Carefully planned planting to bring
+                        your garden to life.
+                    </p>
+
+                </a>
+
+
+                <a href="lighting.html" class="card">
+
+                    <h3>Lighting</h3>
+
+                    <p>
+                        Outdoor lighting designed to enhance
+                        your garden day and night.
+                    </p>
+
+                </a>
+
+
+                <a href="fencing.html" class="card">
+
+                    <h3>Fencing</h3>
+
+                    <p>
+                        Strong and attractive fencing solutions
+                        for privacy and security.
+                    </p>
+
+                </a>
+
+
+                <a href="lawns.html" class="card">
+
+                    <h3>Lawns</h3>
+
+                    <p>
+                        Professional lawn solutions for a
+                        healthy and attractive garden.
+                    </p>
+
+                </a>
+
+
+                <a href="pergolas.html" class="card">
+
+                    <h3>Pergolas</h3>
+
+                    <p>
+                        Beautiful pergolas that create
+                        impressive outdoor living spaces.
+                    </p>
+
+                </a>
+
+
+                <a href="tree-clearance.html" class="card">
+
+                    <h3>Tree Clearance</h3>
+
+                    <p>
+                        Safe and professional tree clearance
+                        for your property.
+                    </p>
+
+                </a>
+
+
+                <a href="drainage.html" class="card">
+
+                    <h3>Drainage</h3>
+
+                    <p>
+                        Effective drainage solutions to help
+                        protect your garden and property.
+                    </p>
+
+                </a>
+
+
+                <a href="maintenance.html" class="card">
+
+                    <h3>Maintenance</h3>
+
+                    <p>
+                        Reliable garden maintenance to keep
+                        your outdoor space looking its best.
+                    </p>
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SHOWCASE
+    ========================== -->
+
+    <section class="showcase">
+
+        <div class="container">
+
+            <h2>
+                Creating Beautiful Outdoor Spaces Since 2000
+            </h2>
+
+            <p>
+                From patios and driveways to complete garden
+                transformations, Cedar Landscapes creates outdoor
+                spaces designed around you.
+            </p>
+
+            <a href="#contact" class="btn">
+                Get a Free Quote
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="contact" id="contact">
+
+        <div class="container">
+
+            <h2>Get In Touch</h2>
+
+            <p>
+                Email:
+                <a href="mailto:info@cedarlandscapes.ie">
+                    info@cedarlandscapes.ie
+                </a>
+            </p>
+
+            <p>
+                Serving Cork and all of Munster
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Cedar Landscapes. All Rights Reserved.
+        </p>
+
+    </footer>
+
 
 </body>
+
 </html>
+```
