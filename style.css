@@ -88,6 +88,7 @@ nav ul li a:hover::after {
 
 /* =========================
    HERO
+   PICTURE: folder/cedar.jpg
 ========================= */
 
 .hero {
@@ -148,6 +149,7 @@ nav ul li a:hover::after {
 
 /* =========================
    ABOUT
+   PICTURE: folder/about.jpg
 ========================= */
 
 .about {
@@ -156,7 +158,7 @@ nav ul li a:hover::after {
     color: white;
 
     background:
-        linear-gradient(rgba(20, 55, 25, 0.72), rgba(20, 55, 25, 0.72)),
+        linear-gradient(rgba(20, 55, 25, 0.70), rgba(20, 55, 25, 0.70)),
         url('folder/about.jpg');
 
     background-size: cover;
@@ -195,6 +197,7 @@ nav ul li a:hover::after {
 
 /* =========================
    SERVICES
+   PICTURE: folder/services.jpg
 ========================= */
 
 .services {
@@ -202,7 +205,7 @@ nav ul li a:hover::after {
     padding: 110px 0;
 
     background:
-        linear-gradient(rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.82)),
+        linear-gradient(rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.78)),
         url('folder/services.jpg');
 
     background-size: cover;
@@ -236,6 +239,7 @@ nav ul li a:hover::after {
 
 /* =========================
    SERVICE CARDS
+   NO IMAGES HERE
 ========================= */
 
 .card {
@@ -269,6 +273,7 @@ nav ul li a:hover::after {
 
 /* =========================
    SHOWCASE
+   PICTURE: folder/showcase.jpg
 ========================= */
 
 .showcase {
@@ -307,6 +312,7 @@ nav ul li a:hover::after {
 
 /* =========================
    CONTACT
+   PICTURE: folder/contact.jpg
 ========================= */
 
 .contact {
@@ -316,11 +322,12 @@ nav ul li a:hover::after {
     color: white;
 
     background:
-        linear-gradient(rgba(27, 94, 32, 0.82), rgba(27, 94, 32, 0.82)),
+        linear-gradient(rgba(27, 94, 32, 0.78), rgba(27, 94, 32, 0.78)),
         url('folder/contact.jpg');
 
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .contact h2 {
@@ -488,9 +495,11 @@ footer {
         font-size: 17px;
     }
 
+    .hero,
     .about,
     .services,
-    .showcase {
+    .showcase,
+    .contact {
         background-attachment: scroll;
     }
 
