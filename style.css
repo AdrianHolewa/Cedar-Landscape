@@ -25,13 +25,17 @@ body {
   height: 100vh;
 
   background:
-    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
     url('folder/cedar.jpg');
 
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 
   color: white;
+
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -45,6 +49,9 @@ body {
   align-items: center;
 
   padding: 25px 40px;
+
+  position: relative;
+  z-index: 5;
 }
 
 .logo {
@@ -92,7 +99,7 @@ body {
 .hero-content {
   text-align: center;
 
-  margin-top: 180px;
+  margin: auto;
 
   padding: 0 20px;
 }
@@ -146,9 +153,11 @@ body {
 /* ========================= */
 
 .about {
-  padding: 80px 20px;
+  padding: 90px 20px;
 
   text-align: center;
+
+  background: #f4f7f5;
 }
 
 .container {
@@ -173,11 +182,39 @@ body {
 
 
 /* ========================= */
+/* IMAGE DIVIDER 1 */
+/* ========================= */
+
+.about::after {
+  content: '';
+
+  display: block;
+
+  height: 420px;
+
+  margin: 80px -20px -90px;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,.30),
+      rgba(0,0,0,.30)
+    ),
+    url('folder/garden.jpg');
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-attachment: fixed;
+}
+
+
+/* ========================= */
 /* SERVICES */
 /* ========================= */
 
 .services {
-  padding: 80px 20px;
+  padding: 100px 20px;
 
   background: white;
 }
@@ -185,7 +222,7 @@ body {
 .services h2 {
   text-align: center;
 
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 
   color: #2e7d32;
 
@@ -202,9 +239,10 @@ body {
 .grid {
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
 
-  gap: 25px;
+  gap: 20px;
 
   max-width: 1200px;
 
@@ -213,103 +251,80 @@ body {
 
 
 /* ========================= */
-/* SERVICE IMAGE CARDS */
+/* SERVICE BOXES */
 /* ========================= */
+/*
+   These stay as normal boxes.
+
+   You can add your own images later
+   without changing the rest of the page.
+*/
 
 .card {
-  position: relative;
+  background: #e8f5e9;
 
-  height: 260px;
+  padding: 35px 25px;
+
+  min-height: 130px;
+
+  border-radius: 15px;
+
+  text-align: center;
+
+  font-weight: 600;
+
+  transition: .3s;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  color: #333;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid #d5ead7;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+
+  background: #c8e6c9;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,.12);
+}
+
+
+/* ========================= */
+/* IMAGE DIVIDER 2 */
+/* ========================= */
+
+.services::after {
+  content: '';
+
+  display: block;
+
+  height: 420px;
+
+  margin: 100px -20px -100px;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,.30),
+      rgba(0,0,0,.30)
+    ),
+    url('folder/showcase.jpg');
 
   background-size: cover;
 
   background-position: center;
 
-  border-radius: 15px;
-
-  overflow: hidden;
-
-  text-decoration: none;
-
-  color: white;
-
-  display: flex;
-
-  align-items: flex-end;
-
-  justify-content: center;
-
-  box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.15);
-
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
-}
-
-
-/* ========================= */
-/* CARD DARK OVERLAY */
-/* ========================= */
-
-.card::before {
-  content: '';
-
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    linear-gradient(
-      to top,
-      rgba(20, 55, 30, 0.9),
-      rgba(20, 55, 30, 0.1)
-    );
-
-  transition: .35s ease;
-}
-
-
-/* ========================= */
-/* SERVICE NAME */
-/* ========================= */
-
-.card span {
-  position: relative;
-
-  z-index: 2;
-
-  margin-bottom: 25px;
-
-  color: white;
-
-  font-size: 1.35rem;
-
-  font-weight: 600;
-
-  text-shadow:
-    0 2px 5px rgba(0, 0, 0, 0.6);
-}
-
-
-/* ========================= */
-/* CARD HOVER */
-/* ========================= */
-
-.card:hover {
-  transform: translateY(-8px);
-
-  box-shadow:
-    0 15px 30px rgba(0, 0, 0, 0.25);
-}
-
-.card:hover::before {
-  background:
-    linear-gradient(
-      to top,
-      rgba(20, 55, 35, 0.95),
-      rgba(20, 55, 35, 0.15)
-    );
+  background-attachment: fixed;
 }
 
 
@@ -318,15 +333,20 @@ body {
 /* ========================= */
 
 .showcase {
-  height: 70vh;
+  min-height: 70vh;
 
   background:
-    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    linear-gradient(
+      rgba(0,0,0,.55),
+      rgba(0,0,0,.55)
+    ),
     url('folder/showcase.jpg');
 
   background-size: cover;
 
   background-position: center;
+
+  background-attachment: fixed;
 
   display: flex;
 
@@ -363,13 +383,22 @@ body {
 /* ========================= */
 
 .contact {
-  background: #2e7d32;
+  background:
+    linear-gradient(
+      rgba(46,125,50,.92),
+      rgba(27,94,32,.95)
+    ),
+    url('folder/garden.jpg');
+
+  background-size: cover;
+
+  background-position: center;
 
   color: white;
 
   text-align: center;
 
-  padding: 80px 20px;
+  padding: 100px 20px;
 }
 
 .contact h2 {
@@ -428,7 +457,8 @@ footer {
 .gallery {
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:
+    repeat(3, 1fr);
 
   gap: 20px;
 
@@ -454,7 +484,8 @@ footer {
 .gallery img {
   object-fit: cover;
 
-  transition: transform .4s ease;
+  transition:
+    transform .4s ease;
 }
 
 .gallery img:hover {
@@ -509,7 +540,7 @@ footer {
 
 
 /* ========================= */
-/* BACK SIDE ROTATION */
+/* BACK SIDE */
 /* ========================= */
 
 .flip-card-back {
@@ -551,15 +582,12 @@ footer {
 @media (max-width: 900px) {
 
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+      repeat(2, 1fr);
   }
 
   .gallery {
     grid-template-columns: 1fr;
-  }
-
-  .hero-content {
-    margin-top: 140px;
   }
 
   .hero-content h2 {
@@ -596,11 +624,7 @@ footer {
   }
 
   .card {
-    height: 230px;
-  }
-
-  .hero-content {
-    margin-top: 120px;
+    min-height: 110px;
   }
 
   .hero-content h2 {
@@ -611,17 +635,42 @@ footer {
     font-size: 1rem;
   }
 
+  .about::after,
+  .services::after {
+    height: 280px;
+
+    background-attachment: scroll;
+  }
+
   .showcase {
-    height: 60vh;
+    min-height: 60vh;
+
+    background-attachment: scroll;
   }
 
   .showcase h2 {
     font-size: 2rem;
   }
 
+  .contact {
+    padding: 70px 20px;
+  }
+
 }
 ```
 
-This keeps **everything you already had**, but changes the service cards so they support the picture backgrounds and gives them the darker green, professional landscaping look.
+### Pictures needed in your `folder`
 
-One important point: **CSS cannot choose which picture belongs to each service**. The image itself is assigned in your HTML with `background-image`. So your HTML needs the corresponding image filenames for the cards to display.
+You'll now have:
+
+```text
+folder/
+│
+├── cedar.jpg       ← FIRST: cedar trees 🌲
+├── garden.jpg      ← large garden/landscaping divider
+└── showcase.jpg    ← large landscaping/project image
+```
+
+Your **service boxes remain completely independent**, so you can later put your own `patio1.jpg`, paving photos, decking photos, etc. into them without messing up the rest of the page.
+
+The important change is that the **large photographic sections are now part of the page design**, rather than putting photos into the 12 service buttons.
