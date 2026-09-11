@@ -1,41 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Paving projects by Cedar Landscapes.">
   <title>Paving | Cedar Landscapes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
-<body>
-<section class="services-page">
-  <h1>Paving</h1>
-  <p>
-    High quality paving installations designed to transform outdoor spaces.
-  </p>
-  <div class="gallery">
-    <!-- ROW 1 -->
-    <img src="folder/paving2.jpg" alt="Paving Project">
-    <!-- BEFORE / AFTER FLIP (ROW 1 COL 2) -->
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img src="folder/pavingB1.jpg" alt="Before Paving">
-          <div class="label">Before</div>
-        </div>
-        <div class="flip-card-back">
-          <img src="folder/pavingA1.jpg" alt="After Paving">
-          <div class="label">After</div>
-        </div>
-      </div>
+<body class="paving-page">
+  <header class="paving-hero">
+    <nav class="paving-nav" aria-label="Main navigation">
+      <a class="logo" href="index.html">Cedar Landscapes</a>
+      <a class="nav-contact" href="index.html#contact">Contact</a>
+    </nav>
+    <div class="paving-hero-content">
+      <p class="eyebrow">Cedar Landscapes</p>
+      <h1>Quality Paving,<br>Built to Last.</h1>
+      <p>Thoughtfully designed paving that brings style, structure and lasting value to your outdoor space.</p>
+      <a class="btn" href="#gallery">View Our Work</a>
     </div>
-    <img src="folder/paving3.jpg" alt="Paving Project">
-    <!-- ROW 2 -->
-    <img src="folder/paving4.jpg" alt="Paving Project">
-    <img src="folder/paving5.jpg" alt="Paving Project">
-    <img src="folder/paving6.jpg" alt="Paving Project">
-  </div>
-  <a href="index.html" class="btn">Back Home</a>
-</section>
+  </header>
+  <main>
+    <section class="paving-intro" aria-labelledby="paving-intro-title">
+      <div><p class="eyebrow">Our Paving Service</p><h2 id="paving-intro-title">A finish made for everyday living</h2></div>
+      <p>From welcoming paths and elegant patios to practical, hard-wearing driveways, every project is finished with care. Browse a selection of our recent paving work below.</p>
+    </section>
+    <section class="paving-gallery-section" id="gallery" aria-labelledby="gallery-title">
+      <div class="section-heading"><p class="eyebrow">Recent Projects</p><h2 id="gallery-title">Paving Gallery</h2></div>
+      <div class="paving-gallery">
+        <img src="folder/paving2.jpg" alt="Completed paving project">
+        <div class="flip-card" tabindex="0" aria-label="Before and after paving project. Hover or focus to view after image."><div class="flip-card-inner"><div class="flip-card-front"><img src="folder/pavingB1.jpg" alt="Paving project before installation"></div><div class="flip-card-back"><img src="folder/pavingA1.jpg" alt="Paving project after installation"></div></div></div>
+        <img src="folder/paving3.jpg" alt="Completed paving project">
+        <img src="folder/paving4.jpg" alt="Completed paving project">
+        <img src="folder/paving5.jpg" alt="Completed paving project">
+        <img src="folder/paving6.jpg" alt="Completed paving project">
+        <img src="folder/paving7.jpg" alt="Completed paving project">
+        <img src="folder/paving8.jpg" alt="Completed paving project">
+        <img src="folder/paving9.jpg" alt="Completed paving project">
+        <img src="folder/paving10.jpg" alt="Completed paving project">
+        <img src="folder/paving11.jpg" alt="Completed paving project">
+        <img src="folder/paving12.jpg" alt="Completed paving project">
+        <img src="folder/paving13.jpg" alt="Completed paving project">
+        <img src="folder/paving14.jpg" alt="Completed paving project">
+        <img src="folder/paving15.jpg" alt="Completed paving project">
+      </div>
+    </section>
+    <section class="paving-cta"><div><p class="eyebrow">Start Your Project</p><h2>Ready to transform your outdoor space?</h2></div><a class="btn btn-light" href="index.html#contact">Get a Free Quote</a></section>
+  </main>
+  <footer><p>&copy; 2026 Cedar Landscapes. All rights reserved.</p></footer>
 </body>
 </html>
