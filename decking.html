@@ -1,39 +1,44 @@
-```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Decking projects by Cedar Landscapes.">
   <title>Decking | Cedar Landscapes</title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
-<body>
-
-<section class="services-page">
-
-  <h1>Decking</h1>
-
-  <p>
-    Beautiful custom patios designed and built for your outdoor space.
-  </p>
-
-  <div class="gallery">
-
-    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Patio">
-
-    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156" alt="Patio">
-
-    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" alt="Patio">
-
-  </div>
-
-  <a href="index.html" class="btn">Back Home</a>
-
-</section>
-
+<body class="decking-page">
+  <header class="decking-hero">
+    <nav class="decking-nav" aria-label="Main navigation">
+      <a class="logo" href="index.html">Cedar Landscapes</a>
+      <a class="nav-contact" href="index.html#contact">Contact</a>
+    </nav>
+    <div class="decking-hero-content">
+      <p class="eyebrow">Cedar Landscapes</p>
+      <h1>Outdoor Living,<br>Beautifully Built.</h1>
+      <p>Custom decking that creates a comfortable, stylish place to relax, entertain and enjoy your garden.</p>
+      <a class="btn" href="#gallery">View Our Work</a>
+    </div>
+  </header>
+  <main>
+    <section class="decking-intro" aria-labelledby="decking-intro-title">
+      <div><p class="eyebrow">Our Decking Service</p><h2 id="decking-intro-title">Made for the way you live outside</h2></div>
+      <p>We design and install practical, high-quality decking that complements your home and makes the most of your outdoor space.</p>
+    </section>
+    <section class="decking-gallery-section" id="gallery" aria-labelledby="gallery-title">
+      <div class="section-heading"><p class="eyebrow">Recent Projects</p><h2 id="gallery-title">Decking Gallery</h2></div>
+      <div class="decking-gallery">
+        <img src="folder/decking1.jpg" alt="Completed decking project">
+        <img src="folder/decking2.jpg" alt="Completed decking project">
+        <img src="folder/decking3.jpg" alt="Completed decking project">
+        <img src="folder/decking4.jpg" alt="Completed decking project">
+      </div>
+    </section>
+    <section class="decking-cta"><div><p class="eyebrow">Start Your Project</p><h2>Ready to enjoy more of your garden?</h2></div><a class="btn btn-light" href="index.html#contact">Get a Free Quote</a></section>
+  </main>
+  <footer><p>&copy; 2026 Cedar Landscapes. All rights reserved.</p></footer>
 </body>
 </html>
-```
