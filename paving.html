@@ -1,60 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paving | Cedar Landscapes</title>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cedar Landscapes: outdoor spaces across Munster.">
+  <title>Cedar Landscapes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<section class="services-page">
-
-  <h1>Paving</h1>
-
-  <p>
-    High quality paving installations designed to transform outdoor spaces.
-  </p>
-
-  <div class="gallery">
-
-    <!-- ROW 1 -->
-    <img src="folder/paving2.jpg" alt="Paving Project">
-
-    <!-- BEFORE / AFTER FLIP (ROW 1 COL 2) -->
-    <div class="flip-card">
-
-      <div class="flip-card-inner">
-
-        <div class="flip-card-front">
-          <img src="folder/pavingB1.jpg" alt="Before Paving">
-          <div class="label">Before</div>
-        </div>
-
-        <div class="flip-card-back">
-          <img src="folder/pavingA1.jpg" alt="After Paving">
-          <div class="label">After</div>
-        </div>
-
-      </div>
-
+  <header class="hero" id="home">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="logo" href="#home">Cedar Landscapes</a>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+      </ul>
+      <a class="nav-contact" href="#contact">Contact</a>
+    </nav>
+    <div class="hero-content">
+      <h1>Transform Your Outdoor Space</h1>
+      <p>25+ years of landscaping expertise across Munster</p>
+      <a class="btn" href="#services">View Services</a>
     </div>
+  </header>
 
-    <img src="folder/paving3.jpg" alt="Paving Project">
+  <main>
+    <section class="about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title">About Cedar Landscapes</h2>
+        <p>Whether you're looking to make small updates or completely transform your garden, we're here to help. We offer patios, paving, driveways, decking, planting, lighting, fencing, lawns, pergolas, tree clearance, drainage and maintenance.</p>
+        <div class="highlight">
+          <h3>Cedar: Experience You Can Trust, Results You'll Love.</h3>
+          <p>We combine years of landscaping experience with quality workmanship to create outdoor spaces that look great and last for years.</p>
+        </div>
+      </div>
+    </section>
 
-    <!-- ROW 2 -->
-    <img src="folder/paving4.jpg" alt="Paving Project">
-    <img src="folder/paving5.jpg" alt="Paving Project">
-    <img src="folder/paving6.jpg" alt="Paving Project">
+    <section class="services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <h2 id="services-title">Our Services</h2>
+        <div class="grid">
+          <a class="card" href="patios.html"><h3>Patios</h3><p>Beautiful, durable areas for relaxing and entertaining.</p></a>
+          <a class="card" href="paving.html"><h3>Paving</h3><p>Quality paving solutions for every outdoor space.</p></a>
+          <a class="card" href="driveways.html"><h3>Driveways</h3><p>Practical, attractive driveways built to last.</p></a>
+          <a class="card" href="decking.html"><h3>Decking</h3><p>Stylish decking areas made for outdoor living.</p></a>
+          <a class="card" href="planting.html"><h3>Planting</h3><p>Thoughtful planting to bring your garden to life.</p></a>
+          <a class="card" href="lighting.html"><h3>Lighting</h3><p>Lighting that enhances your garden day and night.</p></a>
+          <a class="card" href="fencing.html"><h3>Fencing</h3><p>Strong, attractive fencing for privacy and security.</p></a>
+          <a class="card" href="lawns.html"><h3>Lawns</h3><p>Professional lawn solutions for a healthy finish.</p></a>
+          <a class="card" href="pergolas.html"><h3>Pergolas</h3><p>Beautiful pergolas for impressive outdoor spaces.</p></a>
+          <a class="card" href="tree-clearance.html"><h3>Tree Clearance</h3><p>Safe, professional tree clearance for your property.</p></a>
+          <a class="card" href="drainage.html"><h3>Drainage</h3><p>Effective drainage that protects garden and property.</p></a>
+          <a class="card" href="maintenance.html"><h3>Maintenance</h3><p>Reliable care to keep your garden looking its best.</p></a>
+        </div>
+      </div>
+    </section>
 
-  </div>
+    <section class="showcase" aria-labelledby="showcase-title">
+      <div class="container">
+        <h2 id="showcase-title">Creating Beautiful Outdoor Spaces Since 2000</h2>
+        <p>From patios and driveways to complete garden transformations, Cedar Landscapes creates outdoor spaces designed around you.</p>
+        <a class="btn" href="#contact">Get a Free Quote</a>
+      </div>
+    </section>
 
-  <a href="index.html" class="btn">Back Home</a>
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Get In Touch</h2>
+        <p>Email: <a href="mailto:info@cedarlandscapes.ie">info@cedarlandscapes.ie</a></p>
+        <p>Serving Cork and all of Munster</p>
+      </div>
+    </section>
+  </main>
 
-</section>
-
+  <footer><p>&copy; 2026 Cedar Landscapes. All rights reserved.</p></footer>
 </body>
 </html>
