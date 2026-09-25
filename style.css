@@ -1,6 +1,4 @@
-Replace your complete `style.css` with this:
 
-```css
 :root{--green:#2e7d32;--dark-green:#123d17;--page-width:1200px}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
@@ -97,4 +95,3 @@ footer{padding:1.5rem;color:#fff;background:var(--dark-green);text-align:center}
   .paving-gallery,.planting-gallery,.maintenance-gallery,.decking-gallery,.fencing-gallery{grid-template-columns:1fr}
   .paving-hero-content h1,.planting-hero-content h1,.maintenance-hero-content h1,.fencing-hero-content h1,.decking-hero-content h1{font-size:3.2rem}
 }
-```
