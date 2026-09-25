@@ -147,3 +147,28 @@ footer { padding: 1.5rem; color: #fff; background: var(--dark-green); text-align
 @media (max-width: 480px) { .planting-gallery { grid-template-columns: 1fr; } .planting-hero-content h1 { font-size: 3.2rem; } }
 @media (max-width: 480px) { .paving-gallery { grid-template-columns: 1fr; } .paving-hero-content h1 { font-size: 3.2rem; } }
 @media (max-width: 480px) { .maintenance-gallery { grid-template-columns: 1fr; } .maintenance-hero-content h1 { font-size: 3.2rem; } }
+
+/* Fencing project page */
+.fencing-page { background: #f5f7f2; }
+.fencing-hero { min-height: min(46rem, 88svh); position: relative; display: grid; align-items: end; color: #fff; background: linear-gradient(90deg, #0b2014e6 0%, #0b201485 58%, #0b20142e 100%), url("folder/fencing1.jpg") center / cover; }
+.fencing-nav { position: absolute; inset: 0 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 5%; }
+.fencing-hero-content { width: min(90%, 75rem); margin-inline: auto; padding: 10rem 0 clamp(4rem, 9vw, 7rem); }
+.fencing-hero-content h1 { max-width: 48rem; font-size: clamp(3.3rem, 7vw, 6.5rem); line-height: .98; }
+.fencing-hero-content > p:not(.eyebrow) { max-width: 38rem; margin: 1.5rem 0 2rem; font-size: 1.1rem; }
+.fencing-intro { width: min(90%, 70rem); display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; margin: 0 auto; padding: clamp(4.5rem, 9vw, 7rem) 0; align-items: center; }
+.fencing-intro h2, .fencing-cta h2 { color: #153d22; font-size: clamp(2.35rem, 5vw, 4rem); line-height: 1.1; }
+.fencing-intro > p { color: #526056; font-size: 1.1rem; }
+.fencing-gallery-section { width: min(92%, 76rem); margin-inline: auto; padding-bottom: clamp(4.5rem, 9vw, 7rem); }
+.fencing-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.5rem); }
+.fencing-gallery img { width: 100%; aspect-ratio: 4 / 3; display: block; padding: .35rem; border: 1px solid #d4ded1; border-radius: .4rem; background: #fff; object-fit: cover; box-shadow: 0 .8rem 1.8rem #123d1717; transition: transform .25s ease, box-shadow .25s ease; }
+.fencing-gallery img:hover { position: relative; z-index: 1; transform: translateY(-.3rem); box-shadow: 0 1rem 2rem #123d1733; }
+.fencing-cta { display: flex; width: min(92%, 78rem); margin: 0 auto clamp(3rem, 7vw, 5rem); padding: clamp(2.5rem, 6vw, 4rem); align-items: center; justify-content: space-between; gap: 2rem; color: #fff; background: #163e23; }
+.fencing-cta h2 { color: #fff; max-width: 43rem; }
+.fencing-cta .eyebrow { color: #9ad29d; }
+
+@media (max-width: 600px) { .site-nav { flex-wrap: wrap; justify-content: center; padding-block: 1.25rem; } .site-nav ul { order: 3; width: 100%; justify-content: center; margin-left: 0; } .hero-content { padding-top: 10rem; } }
+@media (max-width: 750px) { .maintenance-intro { grid-template-columns: 1fr; gap: 1.5rem; } .maintenance-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } .maintenance-cta { align-items: flex-start; flex-direction: column; } }
+@media (max-width: 750px) { .fencing-intro { grid-template-columns: 1fr; gap: 1.5rem; } .fencing-cta { align-items: flex-start; flex-direction: column; } }
+@media (max-width: 480px) { .decking-gallery { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .maintenance-gallery { grid-template-columns: 1fr; } .maintenance-hero-content h1 { font-size: 3.2rem; } }
+@media (max-width: 480px) { .fencing-gallery { grid-template-columns: 1fr; } .fencing-hero-content h1 { font-size: 3.2rem; } }
