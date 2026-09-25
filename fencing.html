@@ -1,39 +1,44 @@
-```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fencing projects by Cedar Landscapes.">
   <title>Fencing | Cedar Landscapes</title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
-<body>
-
-<section class="services-page">
-
-  <h1>Fencing</h1>
-
-  <p>
-    Beautiful custom patios designed and built for your outdoor space.
-  </p>
-
-  <div class="gallery">
-
-    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Patio">
-
-    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156" alt="Patio">
-
-    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" alt="Patio">
-
-  </div>
-
-  <a href="index.html" class="btn">Back Home</a>
-
-</section>
-
+<body class="fencing-page">
+  <header class="fencing-hero">
+    <nav class="fencing-nav" aria-label="Main navigation">
+      <a class="logo" href="index.html">Cedar Landscapes</a>
+      <a class="nav-contact" href="index.html#contact">Contact</a>
+    </nav>
+    <div class="fencing-hero-content">
+      <p class="eyebrow">Cedar Landscapes</p>
+      <h1>Privacy, Security<br>&amp; Lasting Style.</h1>
+      <p>Beautiful, hard-wearing fencing that defines your garden and gives you space to enjoy it.</p>
+      <a class="btn" href="#gallery">View Our Work</a>
+    </div>
+  </header>
+  <main>
+    <section class="fencing-intro" aria-labelledby="fencing-intro-title">
+      <div><p class="eyebrow">Our Fencing Service</p><h2 id="fencing-intro-title">Built to complement your outdoor space</h2></div>
+      <p>From practical boundary fencing to distinctive garden features, we build every installation with strong materials, precise finishes and care.</p>
+    </section>
+    <section class="fencing-gallery-section" id="gallery" aria-labelledby="gallery-title">
+      <div class="section-heading"><p class="eyebrow">Recent Projects</p><h2 id="gallery-title">Fencing Gallery</h2></div>
+      <div class="fencing-gallery">
+        <img src="folder/fencing1.jpg" alt="Completed fencing project">
+        <img src="folder/fencing2.jpg" alt="Completed fencing project">
+        <img src="folder/fencing3.jpg" alt="Completed fencing project">
+        <img src="folder/fencing4.jpg" alt="Completed fencing project">
+      </div>
+    </section>
+    <section class="fencing-cta"><div><p class="eyebrow">Start Your Project</p><h2>Ready to create a garden with more privacy?</h2></div><a class="btn btn-light" href="index.html#contact">Get a Free Quote</a></section>
+  </main>
+  <footer><p>&copy; 2026 Cedar Landscapes. All rights reserved.</p></footer>
 </body>
 </html>
-```
