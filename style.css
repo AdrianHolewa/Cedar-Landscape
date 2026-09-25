@@ -95,3 +95,23 @@ footer{padding:1.5rem;color:#fff;background:var(--dark-green);text-align:center}
   .paving-gallery,.planting-gallery,.maintenance-gallery,.decking-gallery,.fencing-gallery{grid-template-columns:1fr}
   .paving-hero-content h1,.planting-hero-content h1,.maintenance-hero-content h1,.fencing-hero-content h1,.decking-hero-content h1{font-size:3.2rem}
 }
+/* Driveways project page */
+.driveways-page { background: #f5f7f2; }
+.driveways-hero { min-height: min(46rem, 88svh); position: relative; display: grid; align-items: end; color: #fff; background: linear-gradient(90deg, #0b2014e6 0%, #0b201485 58%, #0b20142e 100%), url("folder/driveways1.jpg") center / cover; }
+.driveways-nav { position: absolute; inset: 0 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 5%; }
+.driveways-hero-content { width: min(90%, 75rem); margin-inline: auto; padding: 10rem 0 clamp(4rem, 9vw, 7rem); }
+.driveways-hero-content h1 { max-width: 48rem; font-size: clamp(3.3rem, 7vw, 6.5rem); line-height: .98; }
+.driveways-hero-content > p:not(.eyebrow) { max-width: 38rem; margin: 1.5rem 0 2rem; font-size: 1.1rem; }
+.driveways-intro { width: min(90%, 70rem); display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; margin: 0 auto; padding: clamp(4.5rem, 9vw, 7rem) 0; align-items: center; }
+.driveways-intro h2, .driveways-cta h2 { color: #153d22; font-size: clamp(2.35rem, 5vw, 4rem); line-height: 1.1; }
+.driveways-intro > p { color: #526056; font-size: 1.1rem; }
+.driveways-gallery-section { width: min(92%, 76rem); margin-inline: auto; padding-bottom: clamp(4.5rem, 9vw, 7rem); }
+.driveways-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.5rem); }
+.driveways-gallery img { width: 100%; aspect-ratio: 4 / 3; display: block; padding: .35rem; border: 1px solid #d4ded1; border-radius: .4rem; background: #fff; object-fit: cover; box-shadow: 0 .8rem 1.8rem #123d1717; transition: transform .25s ease, box-shadow .25s ease; }
+.driveways-gallery img:hover { transform: translateY(-.3rem); box-shadow: 0 1rem 2rem #123d1733; }
+.driveways-cta { display: flex; width: min(92%, 78rem); margin: 0 auto clamp(3rem, 7vw, 5rem); padding: clamp(2.5rem, 6vw, 4rem); align-items: center; justify-content: space-between; gap: 2rem; color: #fff; background: #163e23; }
+.driveways-cta h2 { color: #fff; max-width: 43rem; }
+.driveways-cta .eyebrow { color: #9ad29d; }
+
+@media (max-width: 750px) { .driveways-intro { grid-template-columns: 1fr; gap: 1.5rem; } .driveways-cta { align-items: flex-start; flex-direction: column; } }
+@media (max-width: 480px) { .driveways-gallery { grid-template-columns: 1fr; } .driveways-hero-content h1 { font-size: 3.2rem; } }
